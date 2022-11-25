@@ -1,11 +1,6 @@
 echo "Installing nano, curl and	wget.."
 yum -y install curl wget nano                       
 
-echo "Installing Xen Guest Tools..."
-yum -y install xe-guest-utilities-latest
-systemctl enable xe-linux-distribution
-systemctl start xe-linux-distribution
-
 echo "Fixing Quotas..."
 
 echo "modify grub..."
