@@ -1,6 +1,11 @@
 echo "Install Interworx"
 sh <((curl -sL updates.interworx.com/interworx/7/install.sh)) -l
 
+echo "Installing Xen Guest Tools..."
+yum -y install xe-guest-utilities-latest
+systemctl enable xe-linux-distribution
+systemctl start xe-linux-distribution
+
 echo "Download Lasso 8.6"
 wget http://www.lassosoft.com/_downloads/public/Lasso_Server/BETA/Lasso-Professional-8.6.3-3b1.el7.x86_64.rpm
 wget http://www.lassosoft.com/_downloads/public/Lasso_Server/BETA/Lasso-Professional-Apache2-8.6.3-3b1.el7.x86_64.rpm
