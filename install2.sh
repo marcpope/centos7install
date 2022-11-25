@@ -1,5 +1,5 @@
 echo "Install Interworx"
-sh <((curl -sL updates.interworx.com/interworx/7/install.sh)) -l
+#sh <((curl -sL updates.interworx.com/interworx/7/install.sh)) -l
 
 echo "Installing Xen Guest Tools..."
 yum -y install xe-guest-utilities-latest
