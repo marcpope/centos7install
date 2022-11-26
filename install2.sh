@@ -2,6 +2,7 @@ echo "Install Interworx"
 #sh <((curl -sL updates.interworx.com/interworx/7/install.sh)) -l
 
 echo "Installing Xen Guest Tools..."
+yum -y install epel-release
 yum -y install xe-guest-utilities-latest
 systemctl enable xe-linux-distribution
 systemctl start xe-linux-distribution
@@ -10,13 +11,13 @@ echo "Download Lasso 8.6"
 wget http://www.lassosoft.com/_downloads/public/Lasso_Server/BETA/Lasso-Professional-8.6.3-3b1.el7.x86_64.rpm
 wget http://www.lassosoft.com/_downloads/public/Lasso_Server/BETA/Lasso-Professional-Apache2-8.6.3-3b1.el7.x86_64.rpm
 
-echo "Download ImageMagick and other libraries necessary.."
+echo "Download ImageMagick and other libraries necessary..errors ok here"
 yum -y install ImageMagick java-openjdk libicu unixODBC ImageMagick6-libs ImageMagick6-perl ImageMagick6-devel
 
 echo "Force Install Lasso 8.6"
 rpm --force -ivh *.rpm
 
-echo "Install new image tag"
+echo "Install image tag replacement"
 wget -O ~lasso/LassoStartup/image.lasso https://raw.githubusercontent.com/marcpope/centos7install/main/image.lasso
 chown root:wheel ~lasso/LassoStartup/image.lasso 
 
