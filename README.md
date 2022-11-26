@@ -1,4 +1,4 @@
-# centos7install
+#Install Lasso 8.6 and Interworx 7 on CentOS 7
 
 these are scripts I use to install Lasso & Interworx on CentOS 7. Note your lvm partitions must be prefixed with cl and xfs partitions.
 
