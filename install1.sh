@@ -1,5 +1,5 @@
 echo "Installing nano, curl and	wget.."
-yum -y install curl wget nano                       
+yum -y install curl wget nano unzip                   
 yum -y reinstall ca-certificates
 
 echo "Fixing Quotas..."
